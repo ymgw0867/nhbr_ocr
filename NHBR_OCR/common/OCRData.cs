@@ -324,6 +324,8 @@ namespace NHBR_OCR.common
             
             //r.納品希望月 = Utility.GetStringSubMax(stCSV[6].Trim(), 2).Replace("-", "");   // 2018/09/14
             //r.納品希望日 = Utility.GetStringSubMax(stCSV[7].Trim(), 2).Replace("-", "");   // 2018/09/14
+            
+            // 2018/09/14 新書式対応
             r.納品希望月 = string.Empty;     // OCR認識するも表示せず 2018/09/18
             r.納品希望日 = string.Empty;     // OCR認識するも表示せず2018/09/18
 
