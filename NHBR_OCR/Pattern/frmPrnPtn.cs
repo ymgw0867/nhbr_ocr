@@ -523,6 +523,18 @@ namespace NHBR_OCR.Pattern
                     // お客様名
                     rtnArray[8, 29] = Utility.NulltoStr(dataGridView1[colNouName, i].Value);
 
+                    // 更新日：2018/11/01
+                    DateTime uDt;
+                    if (DateTime.TryParse(dataGridView1[colDate, i].Value.ToString(), out uDt))
+                    {
+                        rtnArray[15, 2] = uDt.ToShortDateString() + " 更新";
+                    }
+                    else
+                    {
+                        rtnArray[15, 2] = string.Empty;
+                    }
+
+
                     var s = dts.パターンID.Single(a => a.ID == Utility.StrtoInt(dataGridView1[colID, i].Value.ToString()));
 
                     // 商品名
