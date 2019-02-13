@@ -812,7 +812,8 @@ namespace NHBR_OCR.Pattern
                     }
 
                     // 備考
-                    //rtnArray[62, 2] = s.備考; 2018/10/02
+                    //rtnArray[62, 2] = s.備考; 2018/10/02　コメント化
+                    rtnArray[62, 78] = s.備考 + Environment.NewLine;    // 2019/02/13
                     
                     // 配列からシートセルに一括してデータをセットします
                     rng = oxlsSheet.Range[oxlsSheet.Cells[1, 1], oxlsSheet.Cells[oxlsSheet.UsedRange.Rows.Count, oxlsSheet.UsedRange.Columns.Count]];
